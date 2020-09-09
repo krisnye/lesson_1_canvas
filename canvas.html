@@ -1,7 +1,22 @@
 <html>
-    Hello
-<canvas width="500" height="500" style="border: black 1px solid" />
-<script>
+    <body style="background:white;">
+        Hello
+        <canvas id="mycanvas" width="500" height="500" style="border: black 1px solid" />
+        <script>
+            let ctx = mycanvas.getContext("2d");
+            ctx.fillStyle = 'red';
+            ctx.fillRect(10, 10, 50, 50);
 
-</script>
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(30, 30, 50, 50);
+
+            // advanced draw a path
+            ctx.fillStyle = 'orange';
+            ctx.beginPath();
+            ctx.moveTo(75, 50);
+            ctx.lineTo(100, 75);
+            ctx.lineTo(100, 25);
+            ctx.fill();
+        </script>
+    </body>
 </html>
